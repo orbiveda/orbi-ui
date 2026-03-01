@@ -1,0 +1,43 @@
+.orbi-button {
+  border: none;
+  border-radius: var(--orbi-radius-md);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.orbi-button--sm {
+  padding: var(--orbi-space-xs) var(--orbi-space-sm);
+  font-size: var(--orbi-font-sm);
+}
+
+.orbi-button--md {
+  padding: var(--orbi-space-sm) var(--orbi-space-md);
+  font-size: var(--orbi-font-md);
+}
+
+.orbi-button--lg {
+  padding: var(--orbi-space-md) var(--orbi-space-lg);
+  font-size: var(--orbi-font-lg);
+}
+
+.orbi-button--primary {
+  background: rgb(var(--orbi-color-primary));
+  color: rgb(var(--orbi-color-on-primary));
+}
+
+.orbi-button--secondary {
+  background: rgb(var(--orbi-color-secondary));
+  color: rgb(var(--orbi-color-on-primary));
+}
+
+.orbi-button--ghost {
+  background: transparent;
+  color: rgb(var(--orbi-color-primary));
+  border: 1px solid rgb(var(--orbi-color-primary));
+}
+
+.orbi-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

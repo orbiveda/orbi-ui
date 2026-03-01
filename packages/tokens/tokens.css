@@ -1,0 +1,31 @@
+:root,
+[data-orbi-theme="light"] {
+  --orbi-color-primary: 0 112 243;
+  --orbi-color-on-primary: 255 255 255;
+  --orbi-color-secondary: 100 116 139;
+  --orbi-color-background: 255 255 255;
+  --orbi-color-surface: 248 250 252;
+  --orbi-color-danger: 220 38 38;
+
+  --orbi-radius-sm: 4px;
+  --orbi-radius-md: 8px;
+  --orbi-radius-lg: 12px;
+
+  --orbi-space-xs: 4px;
+  --orbi-space-sm: 8px;
+  --orbi-space-md: 12px;
+  --orbi-space-lg: 16px;
+  --orbi-space-xl: 24px;
+
+  --orbi-font-sm: 12px;
+  --orbi-font-md: 14px;
+  --orbi-font-lg: 16px;
+}
+[data-orbi-theme="dark"] {
+  --orbi-color-primary: 59 130 246;
+  --orbi-color-on-primary: 0 0 0;
+  --orbi-color-secondary: 148 163 184;
+  --orbi-color-background: 15 23 42;
+  --orbi-color-surface: 30 41 59;
+  --orbi-color-danger: 248 113 113;
+}

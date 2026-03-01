@@ -1,0 +1,6 @@
+{
+  "name": "@orbi/core",
+  "version": "0.0.1",
+  "main": "button/index.ts",
+  "types": "button/index.ts"
+}

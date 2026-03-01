@@ -1,0 +1,13 @@
+{
+  "name": "@orbi/react",
+  "version": "0.0.1",
+  "main": "button/index.ts",
+  "types": "button/index.ts",
+  "peerDependencies": {
+    "react": "^18"
+  },
+  "dependencies": {
+    "@orbi/core": "workspace:*",
+    "@orbi/tokens": "workspace:*"
+  }
+}
