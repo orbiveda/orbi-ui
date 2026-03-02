@@ -1,10 +1,22 @@
 {
   "name": "@orbi/core",
-  "version": "0.0.1",
-  "private": true,
-  "main": "index.ts",
-  "types": "index.ts",
+  "version": "0.1.0-alpha",
+  "description": "Headless React hooks for Orbi UI components",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
   "exports": {
-    ".": "./index.ts"
-  }
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "sideEffects": false
 }

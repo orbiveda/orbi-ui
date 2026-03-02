@@ -1,11 +1,28 @@
 {
   "name": "@orbi/tokens",
-  "version": "0.0.1",
-  "private": true,
-  "main": "index.ts",
-  "types": "index.ts",
+  "version": "0.1.0-alpha",
+  "description": "Design system tokens for Orbi UI",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "tokens.css",
+    "tokens.json"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
   "exports": {
-    ".": "./index.ts",
-    "./tokens.css": "./tokens.css"
-  }
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./tokens.css": "./tokens.css",
+    "./tokens.json": "./tokens.json"
+  },
+  "sideEffects": [
+    "*.css"
+  ]
 }
