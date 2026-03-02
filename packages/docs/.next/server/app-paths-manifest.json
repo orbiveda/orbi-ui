@@ -1,0 +1,6 @@
+{
+  "/docs/getting-started/page": "app/docs/getting-started/page.js",
+  "/docs/components/button/page": "app/docs/components/button/page.js",
+  "/docs/components/dialog/page": "app/docs/components/dialog/page.js",
+  "/docs/design-tokens/page": "app/docs/design-tokens/page.js"
+}

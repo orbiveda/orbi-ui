@@ -1,0 +1,34 @@
+import { LivePlayground } from "@/components/LivePlayground";
+import { PropsTable } from "@/components/PropsTable";
+
+# Badge
+
+A small label component for status indicators, counts, and tags. Supports multiple semantic variants.
+
+## Example
+
+<LivePlayground code={`
+<div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+  <Badge variant="primary">Primary</Badge>
+  <Badge variant="secondary">Secondary</Badge>
+  <Badge variant="success">Success</Badge>
+  <Badge variant="warning">Warning</Badge>
+  <Badge variant="error">Error</Badge>
+</div>
+`} />
+
+## Props
+
+<PropsTable data={[
+  { name: "variant", type: '"primary" | "secondary" | "success" | "warning" | "error"', default: '"primary"', description: "Visual style of the badge." },
+  { name: "className", type: "string", default: "—", description: "Additional CSS class names." },
+  { name: "children", type: "ReactNode", default: "—", description: "Badge content." },
+]} />
+
+## Code
+
+```tsx
+import { Badge } from "@orbi/react";
+
+<Badge variant="success">Active</Badge>
+```

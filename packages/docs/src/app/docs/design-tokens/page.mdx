@@ -1,0 +1,117 @@
+import { TokenSwatches } from "./TokenSwatches";
+
+# Design Tokens
+
+Orbi's design token system is the single source of truth for all visual properties. Every component consumes these tokens — no hardcoded values anywhere.
+
+## Usage
+
+Import the CSS file once at your app root:
+
+```tsx
+import "@orbi/tokens/tokens.css";
+```
+
+Then reference tokens in your own CSS:
+
+```css
+.my-card {
+  background: var(--orbi-color-surface);
+  padding: var(--orbi-space-4);
+  border-radius: var(--orbi-radius-md);
+  box-shadow: var(--orbi-shadow-sm);
+}
+```
+
+## Colors
+
+### Neutral Scale
+
+<TokenSwatches
+  prefix="--orbi-color-neutral"
+  steps={["50","100","200","300","400","500","600","700","800","900"]}
+/>
+
+### Primary Scale
+
+<TokenSwatches
+  prefix="--orbi-color-primary"
+  steps={["50","100","200","300","400","500","600","700","800","900"]}
+/>
+
+### Semantic
+
+| Token | Purpose |
+|-------|---------|
+| `--orbi-color-background` | Page background |
+| `--orbi-color-surface` | Card/section surfaces |
+| `--orbi-color-surface-raised` | Elevated surfaces |
+| `--orbi-color-text-primary` | Primary text |
+| `--orbi-color-text-secondary` | Secondary text |
+| `--orbi-color-text-muted` | Muted/hint text |
+| `--orbi-color-border` | Default borders |
+| `--orbi-color-ring` | Focus ring |
+
+## Spacing
+
+Based on a 4px grid.
+
+| Token | Value |
+|-------|-------|
+| `--orbi-space-1` | 4px |
+| `--orbi-space-2` | 8px |
+| `--orbi-space-3` | 12px |
+| `--orbi-space-4` | 16px |
+| `--orbi-space-5` | 20px |
+| `--orbi-space-6` | 24px |
+| `--orbi-space-8` | 32px |
+| `--orbi-space-10` | 40px |
+| `--orbi-space-12` | 48px |
+| `--orbi-space-16` | 64px |
+
+## Radius
+
+| Token | Value |
+|-------|-------|
+| `--orbi-radius-xs` | 4px |
+| `--orbi-radius-sm` | 6px |
+| `--orbi-radius-md` | 8px |
+| `--orbi-radius-lg` | 12px |
+| `--orbi-radius-xl` | 16px |
+| `--orbi-radius-full` | 9999px |
+
+## Shadow
+
+| Token | Use case |
+|-------|----------|
+| `--orbi-shadow-xs` | Subtle depth |
+| `--orbi-shadow-sm` | Cards, inputs |
+| `--orbi-shadow-md` | Dropdowns |
+| `--orbi-shadow-lg` | Modals |
+| `--orbi-shadow-xl` | Popovers |
+
+## Typography
+
+| Token | Value |
+|-------|-------|
+| `--orbi-font-xs` | 0.75rem |
+| `--orbi-font-sm` | 0.8125rem |
+| `--orbi-font-md` | 0.875rem |
+| `--orbi-font-lg` | 1rem |
+| `--orbi-font-xl` | 1.125rem |
+| `--orbi-font-2xl` | 1.5rem |
+| `--orbi-font-3xl` | 1.875rem |
+
+## Motion
+
+| Token | Value |
+|-------|-------|
+| `--orbi-duration-fast` | 120ms |
+| `--orbi-duration-normal` | 200ms |
+| `--orbi-duration-slow` | 300ms |
+| `--orbi-ease-default` | cubic-bezier(0.4, 0, 0.2, 1) |
+| `--orbi-ease-spring` | cubic-bezier(0.175, 0.885, 0.32, 1.275) |
+
+## Dark Mode
+
+All semantic tokens automatically adapt when `data-orbi-theme="dark"` is set on `<html>`. No extra imports needed.

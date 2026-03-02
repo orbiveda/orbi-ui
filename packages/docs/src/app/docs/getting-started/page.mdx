@@ -1,0 +1,112 @@
+# Getting Started with Orbi UI
+
+**Version:** v0.1.0-alpha
+
+Welcome to Orbi UI, a premium component framework built on clarity, composability, and consistency.
+
+## What is Orbi UI?
+
+Orbi UI is a **token-driven, type-safe component framework** for React that combines:
+
+1. **Headless Logic** — Pure behavioral hooks with no opinions about styling
+2. **Design Tokens** — A single source of truth for your design system
+3. **Styled Components** — Production-ready React components that consume both
+
+This separation allows you to **own your components** instead of being owned by them.
+
+## Design Philosophy
+
+### 1. Tokens Are the Single Source of Truth
+
+Every color, spacing value, border radius, and animation in Orbi UI flows from the token system:
+
+- ✓ Change a token once, update everywhere
+- ✓ Type-safe token consumption
+- ✓ No hardcoded magic numbers
+- ✓ Consistent design system enforcement
+
+### 2. Separation of Logic and Styling
+
+Core provides **headless hooks** that handle all behavior—state, accessibility, keyboard navigation, focus management—with zero styling opinions.
+
+React components layer styling on top. You can use the styled React components as-is, combine headless hooks with your own styling, or mix and match as your needs evolve.
+
+### 3. Strict TypeScript
+
+Everything is typed. Props, variants, states, tokens. This means:
+
+- ✓ Better IDE autocomplete
+- ✓ Catch errors at build time, not runtime
+- ✓ Self-documenting code
+- ✓ Safer refactoring
+
+### 4. Zero External UI Dependencies
+
+Orbi ships only the components you explicitly import. No surprise CSS overhead. No unused code.
+
+## Architecture Overview
+
+```
+packages/
+├── core/          ← Headless logic (useButton, useInput, etc.)
+├── react/         ← Styled components + ThemeProvider
+└── tokens/        ← Design system variables (CSS + JSON + TS types)
+```
+
+## Component Status — All Production-Ready
+
+| Component | Status | Use Case |
+|-----------|--------|----------|
+| Button    | ✅ Stable | Actions and interactions |
+| Input     | ✅ Stable | Text, email, password inputs |
+| Label     | ✅ Stable | Form field labels |
+| Stack     | ✅ Stable | Layout (flex container) |
+| Card      | ✅ Stable | Content grouping |
+| Badge     | ✅ Stable | Status indicators |
+| Avatar    | ✅ Stable | User profile images |
+| Checkbox  | ✅ Stable | Boolean selection |
+| Divider   | ✅ Stable | Visual separators |
+| Dialog    | ✅ Stable | Modal overlays |
+
+## Quick Start
+
+### 1. Install
+
+```bash
+pnpm add @orbi/react @orbi/tokens
+```
+
+### 2. Import tokens
+
+```tsx
+import "@orbi/tokens/tokens.css";
+```
+
+### 3. Use components
+
+```tsx
+import { Button, Input, Card, Label } from "@orbi/react";
+
+function App() {
+  return (
+    <Card>
+      <Label htmlFor="name">Name</Label>
+      <Input id="name" placeholder="Your name" />
+      <Button>Continue</Button>
+    </Card>
+  );
+}
+```
+
+## Next Steps
+
+- **[Installation Guide](/docs/installation)** — Full setup instructions
+- **[Component Library](/docs/button)** — Explore all components
+- **[Design Tokens](/docs/design-tokens)** — Customize your theme
+- **[GitHub](https://github.com/orbi-ui)** — Source code and contributions
+
+## Alpha Release Notice
+
+This is **v0.1.0-alpha**. Component APIs are stable. Your feedback shapes the future.
+
+Report issues and share feature requests on [GitHub](https://github.com/orbi-ui).

@@ -1,0 +1,44 @@
+import { LivePlayground } from "@/components/LivePlayground";
+import { PropsTable } from "@/components/PropsTable";
+
+# Card
+
+A surface container component with token-based styling for grouping related content.
+
+## Example
+
+<LivePlayground code={`
+<div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+  <Card style={{ padding: 20, maxWidth: 280 }}>
+    <h3 style={{ margin: "0 0 8px", fontSize: "1rem" }}>Card Title</h3>
+    <p style={{ margin: 0, fontSize: "0.875rem", opacity: 0.7 }}>
+      This is a basic card using Orbi tokens for spacing, radius, and shadows.
+    </p>
+  </Card>
+  <Card style={{ padding: 20, maxWidth: 280 }}>
+    <Badge variant="success">New</Badge>
+    <h3 style={{ margin: "8px 0", fontSize: "1rem" }}>Feature Card</h3>
+    <p style={{ margin: 0, fontSize: "0.875rem", opacity: 0.7 }}>
+      Cards compose well with other Orbi components.
+    </p>
+  </Card>
+</div>
+`} />
+
+## Props
+
+<PropsTable data={[
+  { name: "className", type: "string", default: "—", description: "Additional CSS class names." },
+  { name: "children", type: "ReactNode", default: "—", description: "Card content." },
+]} />
+
+## Code
+
+```tsx
+import { Card } from "@orbi/react";
+
+<Card>
+  <h3>Title</h3>
+  <p>Content</p>
+</Card>
+```

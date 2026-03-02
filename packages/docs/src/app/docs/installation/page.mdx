@@ -1,0 +1,191 @@
+# Installation
+
+**Version:** v0.1.0-alpha
+
+## Prerequisites
+
+Before installing Orbi UI, ensure you have:
+
+- **Node.js:** 18.0 or higher
+- **Package Manager:** pnpm (recommended), npm 9+, or yarn 4+
+- **React:** 18.2.0 or higher (as a peer dependency)
+
+## Step 1: Install Packages
+
+Install Orbi UI and its peer dependencies:
+
+```bash
+# Using pnpm (recommended)
+pnpm add @orbi/react @orbi/tokens react react-dom
+
+# Using npm
+npm install @orbi/react @orbi/tokens react react-dom
+
+# Using yarn
+yarn add @orbi/react @orbi/tokens react react-dom
+```
+
+## Peer Dependencies
+
+Orbi UI requires the following peer dependencies to be installed in your project:
+
+| Package      | Version  | Required | Notes                              |
+|--------------|----------|----------|-------------------------------------|
+| `react`      | ^18.2.0  | ✓        | Core React library                |
+| `react-dom`  | ^18.2.0  | ✓        | React DOM renderer                |
+
+These are **not** bundled with Orbi UI, allowing you to use your own versions and control your bundle size.
+
+## Step 2: Import Design Tokens
+
+Add the Orbi CSS tokens to your application's entry point. This initializes all design system variables (colors, spacing, typography, shadows, motion):
+
+```tsx
+// src/main.tsx or src/index.tsx or pages/_app.tsx
+import "@orbi/tokens/tokens.css";
+```
+
+This registers CSS custom properties (`--orbi-*-*`) that all Orbi components consume. Without this step, components will render unstyled.
+
+## Step 3: Use Components
+
+Import components from `@orbi/react` and use them in your application:
+
+```tsx
+import { Button, Input, Card, Label } from "@orbi/react";
+
+export default function MyForm() {
+  return (
+    <Card>
+      <h2>Contact Us</h2>
+      <form>
+        <div>
+          <Label htmlFor="email">Email</Label>
+          <Input 
+            id="email" 
+            type="email" 
+            placeholder="you@example.com" 
+          />
+        </div>
+        
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </form>
+    </Card>
+  );
+}
+```
+
+## Step 4: Theme Activation (Optional)
+
+Orbi UI ships with light and dark themes. By default, the theme is determined by system preference.
+
+### Option A: Use ThemeProvider (Recommended)
+
+Wrap your app with `ThemeProvider` for runtime theme switching:
+
+```tsx
+import { ThemeProvider } from "@orbi/react";
+import App from "./App";
+
+export default function Root() {
+  return (
+    <ThemeProvider theme="dark">
+      <App />
+    </ThemeProvider>
+  );
+}
+```
+
+### Option B: Set Theme Attribute Directly
+
+Or set the `data-orbi-theme` attribute on the `<html>` element:
+
+```tsx
+// On app initialization
+document.documentElement.setAttribute("data-orbi-theme", "dark");
+
+// Or in your HTML file
+<html data-orbi-theme="dark">
+  <body>...</body>
+</html>
+```
+
+### Option C: System Preference (Default)
+
+If no theme is specified, Orbi UI automatically uses `prefers-color-scheme` from the user's operating system.
+
+## Integration Example
+
+Here's a complete integration example for a Next.js app:
+
+```tsx
+// app/layout.tsx or pages/_app.tsx
+import "@orbi/tokens/tokens.css";
+import { ThemeProvider } from "@orbi/react";
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html>
+      <body>
+        <ThemeProvider theme="dark">
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
+```
+
+Then use components anywhere in your app:
+
+```tsx
+// app/page.tsx
+"use client";
+
+import { useState } from "react";
+import { Button, Input, Stack, Card } from "@orbi/react";
+
+export default function Page() {
+  const [value, setValue] = useState("");
+
+  return (
+    <Stack direction="column" gap="md">
+      <Card>
+        <h1>Welcome</h1>
+        <Input 
+          placeholder="Type something..." 
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+        />
+        <Button onClick={() => alert(value)}>Submit</Button>
+      </Card>
+    </Stack>
+  );
+}
+```
+
+## Troubleshooting
+
+### Components appear unstyled
+Ensure you've imported `@orbi/tokens/tokens.css` at your app's entry point. Check your browser's Network tab to confirm the CSS is loading.
+
+### Type errors with React
+Make sure `react` and `react-dom` versions are 18.2.0 or higher. Check with:
+```bash
+npm list react react-dom
+```
+
+### Dark mode not working
+Verify that `ThemeProvider` wraps your entire app, or that the `data-orbi-theme` attribute is set on `<html>`.
+
+## What's Next
+
+- Explore the [Component Library](/docs/getting-started) to see all available components
+- Check [Design Tokens](/docs/design-tokens) to customize your theme
+- Review [Component Examples](/docs) for real-world usage patterns

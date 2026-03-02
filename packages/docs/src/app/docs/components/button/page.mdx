@@ -1,0 +1,41 @@
+import { LivePlayground } from "@/components/LivePlayground";
+import { PropsTable } from "@/components/PropsTable";
+
+# Button
+
+A versatile button component supporting multiple variants, sizes, loading state, and disabled state.
+
+## Example
+
+<LivePlayground code={`
+<div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+  <Button variant="primary" size="sm">Small</Button>
+  <Button variant="primary" size="md">Primary</Button>
+  <Button variant="primary" size="lg">Large</Button>
+  <Button variant="secondary" size="md">Secondary</Button>
+  <Button variant="ghost" size="md">Ghost</Button>
+  <Button variant="primary" size="md" disabled>Disabled</Button>
+  <Button variant="primary" size="md" loading>Loading</Button>
+</div>
+`} />
+
+## Props
+
+<PropsTable data={[
+  { name: "variant", type: '"primary" | "secondary" | "ghost"', default: '"primary"', description: "Visual style of the button." },
+  { name: "size", type: '"sm" | "md" | "lg"', default: '"md"', description: "Size of the button." },
+  { name: "disabled", type: "boolean", default: "false", description: "Disables the button and applies aria-disabled." },
+  { name: "loading", type: "boolean", default: "false", description: "Shows loading state and applies aria-busy." },
+  { name: "className", type: "string", default: "—", description: "Additional CSS class names." },
+  { name: "children", type: "ReactNode", default: "—", description: "Button content." },
+]} />
+
+## Code
+
+```tsx
+import { Button } from "@orbi/react";
+
+<Button variant="primary" size="md">
+  Click me
+</Button>
+```

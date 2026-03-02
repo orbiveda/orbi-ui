@@ -1,0 +1,59 @@
+import { LivePlayground } from "@/components/LivePlayground";
+import { PropsTable } from "@/components/PropsTable";
+
+# Dialog
+
+A modal dialog component that renders via a portal. Supports controlled and uncontrolled open state, backdrop click to close, and Escape key handling.
+
+## Example
+
+<LivePlayground code={`
+function DialogDemo() {
+  const [open, setOpen] = useState(false);
+  return (
+    <div>
+      <Button variant="primary" onClick={() => setOpen(true)}>
+        Open Dialog
+      </Button>
+      <Dialog open={open} onOpenChange={setOpen}>
+        <div style={{ padding: 24 }}>
+          <h3 style={{ margin: "0 0 8px" }}>Dialog Title</h3>
+          <p style={{ margin: "0 0 16px", fontSize: "0.875rem", opacity: 0.7 }}>
+            This dialog can be closed by clicking the backdrop or pressing Escape.
+          </p>
+          <Button variant="ghost" onClick={() => setOpen(false)}>
+            Close
+          </Button>
+        </div>
+      </Dialog>
+    </div>
+  );
+}
+`} noInline={false} />
+
+## Props
+
+<PropsTable data={[
+  { name: "open", type: "boolean", default: "—", description: "Controlled open state." },
+  { name: "defaultOpen", type: "boolean", default: "false", description: "Initial open state (uncontrolled)." },
+  { name: "onOpenChange", type: "(open: boolean) => void", default: "—", description: "Callback when open state changes." },
+  { name: "children", type: "ReactNode", default: "—", description: "Dialog content." },
+]} />
+
+## Code
+
+```tsx
+import { Dialog } from "@orbi/react";
+
+function Example() {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <Button onClick={() => setOpen(true)}>Open</Button>
+      <Dialog open={open} onOpenChange={setOpen}>
+        <p>Dialog content</p>
+      </Dialog>
+    </>
+  );
+}
+```

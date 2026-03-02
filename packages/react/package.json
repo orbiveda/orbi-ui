@@ -1,6 +1,6 @@
 {
   "name": "@orbi/react",
-  "version": "0.0.1",
+  "version": "0.1.0-alpha",
   "private": true,
   "main": "index.ts",
   "types": "index.ts",
