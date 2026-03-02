@@ -1,0 +1,36 @@
+.orbi-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--orbi-radius-full);
+  padding: var(--orbi-space-1) var(--orbi-space-3);
+  font-size: var(--orbi-font-xs);
+  font-weight: var(--orbi-weight-medium);
+  line-height: var(--orbi-leading-tight);
+  white-space: nowrap;
+  transition: background var(--orbi-duration-fast) var(--orbi-ease-default);
+}
+
+.orbi-badge--primary {
+  background: var(--orbi-color-primary-50);
+  color: var(--orbi-color-primary-700);
+}
+
+.orbi-badge--secondary {
+  background: var(--orbi-color-neutral-100);
+  color: var(--orbi-color-neutral-700);
+}
+
+.orbi-badge--success {
+  background: var(--orbi-color-success-50);
+  color: var(--orbi-color-success-700);
+}
+
+.orbi-badge--warning {
+  background: var(--orbi-color-warning-50);
+  color: var(--orbi-color-warning-700);
+}
+
+.orbi-badge--error {
+  background: var(--orbi-color-error-50);
+  color: var(--orbi-color-error-700);
+}

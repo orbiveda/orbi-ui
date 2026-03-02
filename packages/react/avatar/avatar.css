@@ -1,0 +1,45 @@
+.orbi-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--orbi-radius-full);
+  overflow: hidden;
+  background: var(--orbi-color-neutral-100);
+  color: var(--orbi-color-text-secondary);
+  font-weight: var(--orbi-weight-medium);
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.orbi-avatar--sm {
+  width: 32px;
+  height: 32px;
+  font-size: var(--orbi-font-xs);
+}
+
+.orbi-avatar--md {
+  width: 40px;
+  height: 40px;
+  font-size: var(--orbi-font-sm);
+}
+
+.orbi-avatar--lg {
+  width: 48px;
+  height: 48px;
+  font-size: var(--orbi-font-md);
+}
+
+.orbi-avatar__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.orbi-avatar__fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+}

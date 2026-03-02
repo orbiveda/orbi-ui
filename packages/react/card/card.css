@@ -1,0 +1,13 @@
+.orbi-card {
+  background: var(--orbi-color-surface-raised);
+  border: 1px solid var(--orbi-color-border);
+  border-radius: var(--orbi-radius-lg);
+  padding: var(--orbi-space-6);
+  box-shadow: var(--orbi-shadow-sm);
+  transition: box-shadow var(--orbi-duration-normal) var(--orbi-ease-default),
+    border-color var(--orbi-duration-normal) var(--orbi-ease-default);
+}
+
+.orbi-card:hover {
+  box-shadow: var(--orbi-shadow-md);
+}

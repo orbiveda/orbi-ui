@@ -1,0 +1,50 @@
+.orbi-checkbox {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid var(--orbi-color-border);
+  border-radius: var(--orbi-radius-xs);
+  background: var(--orbi-color-background);
+  cursor: pointer;
+  transition: background var(--orbi-duration-fast) var(--orbi-ease-default),
+    border-color var(--orbi-duration-fast) var(--orbi-ease-default),
+    box-shadow var(--orbi-duration-fast) var(--orbi-ease-default);
+  vertical-align: middle;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.orbi-checkbox:hover {
+  border-color: var(--orbi-color-neutral-400);
+}
+
+.orbi-checkbox:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--orbi-color-background), 0 0 0 4px var(--orbi-color-ring);
+}
+
+.orbi-checkbox:checked {
+  background: var(--orbi-color-primary-500);
+  border-color: var(--orbi-color-primary-500);
+}
+
+.orbi-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 5px;
+  height: 9px;
+  border: solid var(--orbi-color-text-inverse);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.orbi-checkbox--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.orbi-checkbox--disabled:hover {
+  border-color: var(--orbi-color-border);
+}

@@ -1,0 +1,20 @@
+.orbi-input {
+  border: 1px solid rgb(var(--orbi-color-secondary));
+  border-radius: var(--orbi-radius-md);
+  padding: var(--orbi-space-sm) var(--orbi-space-md);
+  font-size: var(--orbi-font-md);
+  background: rgb(var(--orbi-color-surface));
+  color: rgb(var(--orbi-color-primary));
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.orbi-input:focus {
+  border-color: rgb(var(--orbi-color-primary));
+  box-shadow: 0 0 0 2px rgba(var(--orbi-color-primary), 0.3);
+}
+
+.orbi-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

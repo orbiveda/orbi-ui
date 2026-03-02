@@ -1,31 +1,202 @@
+/* Orbi UI — Design Tokens v1 */
+
 :root,
 [data-orbi-theme="light"] {
-  --orbi-color-primary: 0 112 243;
+  /* Neutral Scale */
+  --orbi-color-neutral-50: #fafafa;
+  --orbi-color-neutral-100: #f5f5f5;
+  --orbi-color-neutral-200: #e5e5e5;
+  --orbi-color-neutral-300: #d4d4d4;
+  --orbi-color-neutral-400: #a3a3a3;
+  --orbi-color-neutral-500: #737373;
+  --orbi-color-neutral-600: #525252;
+  --orbi-color-neutral-700: #404040;
+  --orbi-color-neutral-800: #262626;
+  --orbi-color-neutral-900: #171717;
+
+  /* Primary Scale */
+  --orbi-color-primary-50: #eff6ff;
+  --orbi-color-primary-100: #dbeafe;
+  --orbi-color-primary-200: #bfdbfe;
+  --orbi-color-primary-300: #93c5fd;
+  --orbi-color-primary-400: #60a5fa;
+  --orbi-color-primary-500: #3b82f6;
+  --orbi-color-primary-600: #2563eb;
+  --orbi-color-primary-700: #1d4ed8;
+  --orbi-color-primary-800: #1e40af;
+  --orbi-color-primary-900: #1e3a8a;
+
+  /* Semantic: Status */
+  --orbi-color-success-50: #f0fdf4;
+  --orbi-color-success-500: #22c55e;
+  --orbi-color-success-700: #15803d;
+  --orbi-color-warning-50: #fffbeb;
+  --orbi-color-warning-500: #f59e0b;
+  --orbi-color-warning-700: #b45309;
+  --orbi-color-error-50: #fef2f2;
+  --orbi-color-error-500: #ef4444;
+  --orbi-color-error-700: #b91c1c;
+  --orbi-color-info-50: #eff6ff;
+  --orbi-color-info-500: #3b82f6;
+  --orbi-color-info-700: #1d4ed8;
+
+  /* Semantic: Surfaces */
+  --orbi-color-background: #ffffff;
+  --orbi-color-surface: #fafafa;
+  --orbi-color-surface-raised: #ffffff;
+
+  /* Semantic: Text */
+  --orbi-color-text-primary: #171717;
+  --orbi-color-text-secondary: #525252;
+  --orbi-color-text-muted: #a3a3a3;
+  --orbi-color-text-inverse: #ffffff;
+
+  /* Semantic: Border */
+  --orbi-color-border: #e5e5e5;
+  --orbi-color-border-subtle: #f5f5f5;
+
+  /* Semantic: Interactive */
+  --orbi-color-ring: #3b82f6;
+
+  /* Legacy compat — rgb-triplet vars used by existing components */
+  --orbi-color-primary: 59 130 246;
   --orbi-color-on-primary: 255 255 255;
   --orbi-color-secondary: 100 116 139;
-  --orbi-color-background: 255 255 255;
-  --orbi-color-surface: 248 250 252;
-  --orbi-color-danger: 220 38 38;
 
-  --orbi-radius-sm: 4px;
-  --orbi-radius-md: 8px;
-  --orbi-radius-lg: 12px;
+  /* Spacing (4px base) */
+  --orbi-space-0: 0px;
+  --orbi-space-1: 4px;
+  --orbi-space-2: 8px;
+  --orbi-space-3: 12px;
+  --orbi-space-4: 16px;
+  --orbi-space-5: 20px;
+  --orbi-space-6: 24px;
+  --orbi-space-8: 32px;
+  --orbi-space-10: 40px;
+  --orbi-space-12: 48px;
+  --orbi-space-16: 64px;
 
+  /* Legacy spacing aliases */
   --orbi-space-xs: 4px;
   --orbi-space-sm: 8px;
   --orbi-space-md: 12px;
   --orbi-space-lg: 16px;
   --orbi-space-xl: 24px;
 
-  --orbi-font-sm: 12px;
-  --orbi-font-md: 14px;
-  --orbi-font-lg: 16px;
+  /* Radius */
+  --orbi-radius-xs: 4px;
+  --orbi-radius-sm: 6px;
+  --orbi-radius-md: 8px;
+  --orbi-radius-lg: 12px;
+  --orbi-radius-xl: 16px;
+  --orbi-radius-full: 9999px;
+
+  /* Shadow */
+  --orbi-shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+  --orbi-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.03);
+  --orbi-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+  --orbi-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
+  --orbi-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+
+  /* Typography: Font Size */
+  --orbi-font-xs: 0.75rem;
+  --orbi-font-sm: 0.8125rem;
+  --orbi-font-md: 0.875rem;
+  --orbi-font-lg: 1rem;
+  --orbi-font-xl: 1.125rem;
+  --orbi-font-2xl: 1.5rem;
+  --orbi-font-3xl: 1.875rem;
+
+  /* Typography: Font Weight */
+  --orbi-weight-regular: 400;
+  --orbi-weight-medium: 500;
+  --orbi-weight-semibold: 600;
+  --orbi-weight-bold: 700;
+
+  /* Typography: Line Height */
+  --orbi-leading-tight: 1.25;
+  --orbi-leading-normal: 1.5;
+  --orbi-leading-relaxed: 1.625;
+
+  /* Motion: Duration */
+  --orbi-duration-fast: 120ms;
+  --orbi-duration-normal: 200ms;
+  --orbi-duration-slow: 300ms;
+
+  /* Motion: Easing */
+  --orbi-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --orbi-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --orbi-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --orbi-ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
+/* Dark Theme */
 [data-orbi-theme="dark"] {
-  --orbi-color-primary: 59 130 246;
+  /* Neutral Scale (inverted) */
+  --orbi-color-neutral-50: #171717;
+  --orbi-color-neutral-100: #262626;
+  --orbi-color-neutral-200: #404040;
+  --orbi-color-neutral-300: #525252;
+  --orbi-color-neutral-400: #737373;
+  --orbi-color-neutral-500: #a3a3a3;
+  --orbi-color-neutral-600: #d4d4d4;
+  --orbi-color-neutral-700: #e5e5e5;
+  --orbi-color-neutral-800: #f5f5f5;
+  --orbi-color-neutral-900: #fafafa;
+
+  /* Primary Scale (slightly brighter for dark bg) */
+  --orbi-color-primary-50: #1e3a8a;
+  --orbi-color-primary-100: #1e40af;
+  --orbi-color-primary-200: #1d4ed8;
+  --orbi-color-primary-300: #2563eb;
+  --orbi-color-primary-400: #3b82f6;
+  --orbi-color-primary-500: #60a5fa;
+  --orbi-color-primary-600: #93c5fd;
+  --orbi-color-primary-700: #bfdbfe;
+  --orbi-color-primary-800: #dbeafe;
+  --orbi-color-primary-900: #eff6ff;
+
+  /* Semantic: Status (adjusted for dark) */
+  --orbi-color-success-50: #052e16;
+  --orbi-color-success-500: #4ade80;
+  --orbi-color-success-700: #86efac;
+  --orbi-color-warning-50: #451a03;
+  --orbi-color-warning-500: #fbbf24;
+  --orbi-color-warning-700: #fcd34d;
+  --orbi-color-error-50: #450a0a;
+  --orbi-color-error-500: #f87171;
+  --orbi-color-error-700: #fca5a5;
+  --orbi-color-info-50: #1e3a8a;
+  --orbi-color-info-500: #60a5fa;
+  --orbi-color-info-700: #93c5fd;
+
+  /* Semantic: Surfaces */
+  --orbi-color-background: #0a0a0a;
+  --orbi-color-surface: #171717;
+  --orbi-color-surface-raised: #262626;
+
+  /* Semantic: Text */
+  --orbi-color-text-primary: #fafafa;
+  --orbi-color-text-secondary: #a3a3a3;
+  --orbi-color-text-muted: #525252;
+  --orbi-color-text-inverse: #171717;
+
+  /* Semantic: Border */
+  --orbi-color-border: #404040;
+  --orbi-color-border-subtle: #262626;
+
+  /* Semantic: Interactive */
+  --orbi-color-ring: #60a5fa;
+
+  /* Legacy compat */
+  --orbi-color-primary: 96 165 250;
   --orbi-color-on-primary: 0 0 0;
   --orbi-color-secondary: 148 163 184;
-  --orbi-color-background: 15 23 42;
-  --orbi-color-surface: 30 41 59;
-  --orbi-color-danger: 248 113 113;
+
+  /* Shadow (darker environment, slightly more visible) */
+  --orbi-shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  --orbi-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 2px -1px rgba(0, 0, 0, 0.15);
+  --orbi-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.25), 0 2px 4px -2px rgba(0, 0, 0, 0.15);
+  --orbi-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -4px rgba(0, 0, 0, 0.15);
+  --orbi-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.15);
 }

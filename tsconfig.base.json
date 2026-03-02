@@ -10,8 +10,15 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@orbi/tokens": ["packages/tokens/index.ts"],
-      "@orbi/core": ["packages/core/button/index.ts"]
+      "@orbi/core": [
+        "packages/core/index.ts"
+      ],
+      "@orbi/tokens": [
+        "packages/tokens/index.ts"
+      ],
+      "@orbi/react": [
+        "packages/react/index.ts"
+      ]
     }
   }
 }

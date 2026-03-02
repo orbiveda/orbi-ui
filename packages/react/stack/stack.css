@@ -1,0 +1,31 @@
+.orbi-stack {
+  display: flex;
+}
+
+.orbi-stack--vertical {
+  flex-direction: column;
+}
+
+.orbi-stack--horizontal {
+  flex-direction: row;
+}
+
+.orbi-stack--gap-xs {
+  gap: var(--orbi-space-xs);
+}
+
+.orbi-stack--gap-sm {
+  gap: var(--orbi-space-sm);
+}
+
+.orbi-stack--gap-md {
+  gap: var(--orbi-space-md);
+}
+
+.orbi-stack--gap-lg {
+  gap: var(--orbi-space-lg);
+}
+
+.orbi-stack--gap-xl {
+  gap: var(--orbi-space-xl);
+}

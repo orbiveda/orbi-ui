@@ -1,0 +1,17 @@
+.orbi-dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orbi-dialog-content {
+  background: rgb(var(--orbi-color-surface));
+  color: rgb(var(--orbi-color-primary));
+  border-radius: var(--orbi-radius-lg);
+  padding: var(--orbi-space-lg);
+  min-width: 300px;
+  max-width: 90vw;
+}

@@ -1,0 +1,12 @@
+.orbi-label {
+  display: inline-block;
+  margin-bottom: var(--orbi-space-xs);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgb(var(--orbi-color-primary));
+}
+
+.orbi-label-required {
+  margin-left: 4px;
+  color: red;
+}
