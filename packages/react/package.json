@@ -1,6 +1,6 @@
 {
   "name": "@orbi/react",
-  "version": "0.1.0-alpha",
+  "version": "0.1.1-alpha",
   "description": "Premium React components built on Orbi UI design system",
   "license": "MIT",
   "type": "module",
@@ -24,7 +24,7 @@
     "react-dom": ">=18.2.0"
   },
   "dependencies": {
-    "@orbi/core": "0.1.0-alpha",
-    "@orbi/tokens": "0.1.0-alpha"
+    "@orbi/core": "workspace:*",
+    "@orbi/tokens": "workspace:*"
   }
 }

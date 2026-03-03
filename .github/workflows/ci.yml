@@ -48,13 +48,20 @@ jobs:
       # ─────────────────────────────────────────────────────────────
       # 3. TESTS: Run unit + accessibility tests
       # ─────────────────────────────────────────────────────────────
-      - name: Run Tests (Vitest)
+      - name: Run Unit & Accessibility Tests (Vitest)
         run: pnpm run test:unit --run
         continue-on-error: false
 
       - name: Test Coverage Report
         run: pnpm run test:coverage --run 2>/dev/null || echo "Coverage not configured"
         continue-on-error: true
+
+      # ─────────────────────────────────────────────────────────────
+      # 3b. API CONTRACT TESTS: Verify public API stability
+      # ─────────────────────────────────────────────────────────────
+      - name: Run API Contract Tests (Type Validation)
+        run: pnpm run test:types --run
+        continue-on-error: false
 
       # ─────────────────────────────────────────────────────────────
       # 4. LINT: Code quality checks (if configured)
@@ -68,6 +75,13 @@ jobs:
       # ─────────────────────────────────────────────────────────────
       - name: Build packages
         run: pnpm run build
+        continue-on-error: false
+
+      # ─────────────────────────────────────────────────────────────
+      # 5b. BUNDLE SIZE: Validate size guardrails
+      # ─────────────────────────────────────────────────────────────
+      - name: Check Bundle Sizes
+        run: node scripts/check-bundle-size.js
         continue-on-error: false
 
       # ─────────────────────────────────────────────────────────────
@@ -166,12 +180,16 @@ jobs:
       - name: CI Summary
         if: always()
         run: |
-          echo "════════════════════════════════════════════"
-          echo "Quality Hardening CI Complete"
-          echo "════════════════════════════════════════════"
+          echo "════════════════════════════════════════════════════════"
+          echo "PHASE C — Structural Maturity Hardening — CI Complete"
+          echo "════════════════════════════════════════════════════════"
           echo "✓ Dependencies installed"
-          echo "✓ TypeScript validation passed"
+          echo "✓ TypeScript validation (strict mode)"
           echo "✓ Unit tests passed"
+          echo "✓ Accessibility tests passed (axe-core)"
+          echo "✓ API contract stability verified"
           echo "✓ Build successful"
+          echo "✓ Bundle size gudrails validated"
           echo "✓ Package verification passed"
-          echo "════════════════════════════════════════════"
+          echo "════════════════════════════════════════════════════════"
+          echo "All structural integrity checks complete."

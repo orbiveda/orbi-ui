@@ -1,6 +1,6 @@
 {
   "name": "@orbi/core",
-  "version": "0.1.0-alpha",
+  "version": "0.1.1-alpha",
   "description": "Headless React hooks for Orbi UI components",
   "license": "MIT",
   "type": "module",

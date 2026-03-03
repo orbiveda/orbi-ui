@@ -24,7 +24,8 @@ export const Avatar = forwardRef<HTMLSpanElement, AvatarProps>(
       .join(" ");
 
     // Prefer alt text over aria-label prop
-    const ariaLabel = alt || rest["aria-label"];
+    // prefer explicit alt; fallback to provided aria-label or fallback text
+    const ariaLabel = alt || rest["aria-label"] || fallback;
 
     return (
       <span 

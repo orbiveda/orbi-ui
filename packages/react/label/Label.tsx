@@ -18,7 +18,6 @@ export const Label = forwardRef<HTMLLabelElement, LabelProps>(
       <label 
         ref={ref} 
         className={classes}
-        aria-required={isRequired || undefined}
         {...rest}
       >
         {children}

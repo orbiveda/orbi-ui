@@ -1,6 +1,7 @@
 import { render } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { Stack } from "./Stack";
+import { assertAccessible } from "../test/utils/a11y";
 
 
 describe("Stack", () => {
@@ -35,4 +36,22 @@ it("applies gap class", () => {
   const div = container.firstElementChild as HTMLDivElement;
   expect(div.className.includes("gap-lg")).toBe(true);
 });
-});
+  // Accessibility tests
+  it("has no violations with a single child", async () => {
+    const { container } = render(
+      <Stack>
+        <div>Child</div>
+      </Stack>
+    );
+    await assertAccessible(container);
+  });
+
+  it("has no violations with multiple children", async () => {
+    const { container } = render(
+      <Stack>
+        <div>One</div>
+        <div>Two</div>
+      </Stack>
+    );
+    await assertAccessible(container);
+  });});

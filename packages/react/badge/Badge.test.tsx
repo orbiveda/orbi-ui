@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { Badge } from "./Badge";
+import { assertAccessible } from "../test/utils/a11y";
 
 describe("Badge", () => {
   it("renders children correctly", () => {
@@ -32,5 +33,16 @@ describe("Badge", () => {
     render(<Badge ref={ref}>Ref</Badge>);
     expect(ref.current).toBeDefined();
     expect(ref.current?.tagName).toBe("SPAN");
+  });
+
+  // Accessibility tests
+  it("has no violations in default state", async () => {
+    const { container } = render(<Badge>New</Badge>);
+    await assertAccessible(container);
+  });
+
+  it("has no violations with variant", async () => {
+    const { container } = render(<Badge variant="error">Error</Badge>);
+    await assertAccessible(container);
   });
 });

@@ -1,0 +1,17 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/page": "/",
+  "/docs/components/avatar/page": "/docs/components/avatar",
+  "/docs/components/button/page": "/docs/components/button",
+  "/docs/components/badge/page": "/docs/components/badge",
+  "/docs/components/checkbox/page": "/docs/components/checkbox",
+  "/docs/components/card/page": "/docs/components/card",
+  "/docs/components/dialog/page": "/docs/components/dialog",
+  "/docs/components/divider/page": "/docs/components/divider",
+  "/docs/components/input/page": "/docs/components/input",
+  "/docs/components/label/page": "/docs/components/label",
+  "/docs/components/stack/page": "/docs/components/stack",
+  "/docs/design-tokens/page": "/docs/design-tokens",
+  "/docs/installation/page": "/docs/installation",
+  "/docs/getting-started/page": "/docs/getting-started"
+}

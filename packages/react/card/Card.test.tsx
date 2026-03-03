@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { Card } from "./Card";
+import { assertAccessible } from "../test/utils/a11y";
 
 describe("Card", () => {
   it("renders children correctly", () => {
@@ -26,5 +27,18 @@ describe("Card", () => {
     render(<Card data-testid="card" aria-label="Main card">Content</Card>);
     const card = screen.getByTestId("card");
     expect(card.getAttribute("aria-label")).toBe("Main card");
+  });
+
+  // Accessibility tests
+  it("has no a11y violations in minimal state", async () => {
+    const { container } = render(<Card>Accessible</Card>);
+    await assertAccessible(container);
+  });
+
+  it("has no violations when using aria-label", async () => {
+    const { container } = render(
+      <Card aria-label="labelled card">Content</Card>
+    );
+    await assertAccessible(container);
   });
 });

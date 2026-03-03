@@ -18,6 +18,9 @@
       ],
       "@orbi/react": [
         "packages/react/index.ts"
+      ],
+      "@/*": [
+        "packages/docs/src/*"
       ]
     }
   }

@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { Avatar } from "./Avatar";
+import { assertAccessible } from "../test/utils/a11y";
 
 describe("Avatar", () => {
   it("renders image when src is provided", () => {
@@ -40,5 +41,16 @@ describe("Avatar", () => {
     const avatar = screen.getByTestId("avatar");
     expect(avatar.getAttribute("role")).toBe("img");
     expect(avatar.getAttribute("aria-label")).toBe("User photo");
+  });
+
+  // Accessibility tests
+  it("has no violations when image provided", async () => {
+    const { container } = render(<Avatar src="photo.jpg" alt="User" />);
+    await assertAccessible(container);
+  });
+
+  it("has no violations with fallback initials", async () => {
+    const { container } = render(<Avatar fallback="JD" />);
+    await assertAccessible(container);
   });
 });
