@@ -22,7 +22,6 @@ export const Divider = forwardRef<HTMLHRElement, DividerProps>(
         ref={ref}
         className={classes}
         role="separator"
-        aria-orientation={orientation}
         {...rest}
       />
     );

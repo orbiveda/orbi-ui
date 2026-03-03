@@ -16,7 +16,6 @@ export function createButtonPrimitive(
 
   return {
     "data-orbi-button": true,
-    "aria-disabled": disabled || loading ? true : undefined,
     "aria-busy": loading ? true : undefined,
     disabled: disabled || loading,
   };

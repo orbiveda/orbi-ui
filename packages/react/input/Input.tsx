@@ -7,7 +7,13 @@ interface InputProps
     React.InputHTMLAttributes<HTMLInputElement> {}
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ disabled, readOnly, required, className, ...rest }, ref) => {
+  ({ 
+    disabled, 
+    readOnly, 
+    required, 
+    className, 
+    ...rest 
+  }, ref) => {
     const primitiveProps = useInput({
       disabled,
       readOnly,

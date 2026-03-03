@@ -4,5 +4,4 @@ export interface InputBaseProps {
   disabled?: boolean;
   readOnly?: boolean;
   required?: boolean;
-  
 }

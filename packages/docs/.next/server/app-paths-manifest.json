@@ -1,6 +1,7 @@
 {
-  "/docs/getting-started/page": "app/docs/getting-started/page.js",
+  "/page": "app/page.js",
+  "/docs/installation/page": "app/docs/installation/page.js",
+  "/docs/design-tokens/page": "app/docs/design-tokens/page.js",
   "/docs/components/button/page": "app/docs/components/button/page.js",
-  "/docs/components/dialog/page": "app/docs/components/dialog/page.js",
-  "/docs/design-tokens/page": "app/docs/design-tokens/page.js"
+  "/docs/components/label/page": "app/docs/components/label/page.js"
 }

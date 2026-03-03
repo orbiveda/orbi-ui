@@ -15,7 +15,12 @@ export const Label = forwardRef<HTMLLabelElement, LabelProps>(
       .join(" ");
 
     return (
-      <label ref={ref} className={classes} {...rest}>
+      <label 
+        ref={ref} 
+        className={classes}
+        aria-required={isRequired || undefined}
+        {...rest}
+      >
         {children}
         {isRequired && (
           <span className="orbi-label-required">*</span>

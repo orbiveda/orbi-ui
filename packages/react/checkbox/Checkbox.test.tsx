@@ -28,7 +28,6 @@ describe("Checkbox", () => {
     render(<Checkbox data-testid="checkbox" disabled />);
     const checkbox = screen.getByTestId("checkbox") as HTMLInputElement;
     expect(checkbox.disabled).toBe(true);
-    expect(checkbox.getAttribute("aria-disabled")).toBe("true");
     expect(checkbox.className.includes("orbi-checkbox--disabled")).toBe(true);
   });
 

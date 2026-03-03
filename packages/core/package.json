@@ -18,5 +18,13 @@
       "default": "./dist/index.js"
     }
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "peerDependencies": {
+    "react": ">=18.2.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  }
 }

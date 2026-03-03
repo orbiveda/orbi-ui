@@ -23,8 +23,17 @@ export const Avatar = forwardRef<HTMLSpanElement, AvatarProps>(
       .filter(Boolean)
       .join(" ");
 
+    // Prefer alt text over aria-label prop
+    const ariaLabel = alt || rest["aria-label"];
+
     return (
-      <span ref={ref} className={classes} role="img" aria-label={alt || undefined} {...rest}>
+      <span 
+        ref={ref} 
+        className={classes} 
+        role="img" 
+        aria-label={ariaLabel || undefined}
+        {...rest}
+      >
         {showImage ? (
           <img
             src={src}

@@ -20,7 +20,6 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
         type="checkbox"
         className={classes}
         disabled={disabled}
-        aria-disabled={disabled || undefined}
         {...rest}
       />
     );
