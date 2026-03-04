@@ -1,3 +1,4 @@
+"use client";
 // packages/react/tabs/Tabs.tsx
 
 import React, { forwardRef, useState, ReactNode, useMemo } from "react";
@@ -7,8 +8,8 @@ import "./tabs.css";
 
 export interface TabsProps
   extends Omit<TabsBaseProps, "onValueChange">,
-    Omit<React.HTMLAttributes<HTMLDivElement>, "onChange" | "defaultValue">,
-    Pick<TabsBaseProps, "onValueChange"> {
+  Omit<React.HTMLAttributes<HTMLDivElement>, "onChange" | "defaultValue">,
+  Pick<TabsBaseProps, "onValueChange"> {
   children: ReactNode;
 }
 

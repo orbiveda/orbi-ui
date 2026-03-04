@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect } from "react";
 
 export type OrbiTheme = "light" | "dark";

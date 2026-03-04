@@ -21,17 +21,25 @@ build/
 .env.local
 .env.*.local
 
+
 # Testing
 coverage/
 .nyc_output/
 
+
 # Temporary files
 *.tmp
 *.temp
+.cache/
+.eslintcache
 
 # OS-specific
 .DS_Store
 Thumbs.db
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
 
 # Logs
 *.log
@@ -41,5 +49,9 @@ npm-debug.log*
 .env
 .env.local
 .env.*.local
+##
 
-
+.next/
+dist/
+build/
+node_modules/

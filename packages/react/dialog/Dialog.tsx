@@ -1,3 +1,4 @@
+"use client";
 // packages/react/dialog/Dialog.tsx
 
 import React, {

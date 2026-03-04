@@ -1,9 +1,10 @@
+"use client";
 // packages/react/tabs/TabsList.tsx
 
 import React, { forwardRef } from "react";
 import { useTabsContext } from "./TabsContext";
 
-export interface TabsListProps extends React.HTMLAttributes<HTMLDivElement> {}
+export interface TabsListProps extends React.HTMLAttributes<HTMLDivElement> { }
 
 export const TabsList = forwardRef<HTMLDivElement, TabsListProps>(
   ({ className, ...rest }, ref) => {

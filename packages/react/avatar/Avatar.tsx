@@ -1,3 +1,4 @@
+"use client";
 import React, { forwardRef, useState } from "react";
 import "./avatar.css";
 
@@ -28,10 +29,10 @@ export const Avatar = forwardRef<HTMLSpanElement, AvatarProps>(
     const ariaLabel = alt || rest["aria-label"] || fallback;
 
     return (
-      <span 
-        ref={ref} 
-        className={classes} 
-        role="img" 
+      <span
+        ref={ref}
+        className={classes}
+        role="img"
         aria-label={ariaLabel || undefined}
         {...rest}
       >

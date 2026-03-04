@@ -1,12 +1,13 @@
+"use client";
 // packages/react/tooltip/Tooltip.tsx
 
-import React, { 
-  forwardRef, 
-  useState, 
-  useRef, 
-  useEffect, 
-  ReactNode, 
-  useCallback 
+import React, {
+  forwardRef,
+  useState,
+  useRef,
+  useEffect,
+  ReactNode,
+  useCallback
 } from "react";
 import { createPortal } from "react-dom";
 import { TooltipBaseProps, createTooltipPrimitive } from "@orbi/core";
@@ -136,8 +137,8 @@ export const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
       if (!primitive.isOpen) return;
 
       const handleClickOutside = (e: MouseEvent) => {
-        if (!triggerRef.current?.contains(e.target as Node) && 
-            !tooltipRef.current?.contains(e.target as Node)) {
+        if (!triggerRef.current?.contains(e.target as Node) &&
+          !tooltipRef.current?.contains(e.target as Node)) {
           handleHide();
         }
       };

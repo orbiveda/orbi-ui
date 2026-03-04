@@ -1,3 +1,4 @@
+"use client";
 // packages/react/tabs/TabsContent.tsx
 
 import React, { forwardRef } from "react";

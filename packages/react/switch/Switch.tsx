@@ -1,3 +1,4 @@
+"use client";
 // packages/react/switch/Switch.tsx
 
 import React, { forwardRef, useState } from "react";
@@ -6,7 +7,7 @@ import "./switch.css";
 
 export interface SwitchProps
   extends SwitchBaseProps,
-    Omit<React.HTMLAttributes<HTMLButtonElement>, "onChange"> {}
+  Omit<React.HTMLAttributes<HTMLButtonElement>, "onChange"> { }
 
 export const Switch = forwardRef<HTMLButtonElement, SwitchProps>(
   (

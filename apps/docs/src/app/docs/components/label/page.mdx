@@ -1,0 +1,36 @@
+import { Preview } from "@/components/Preview";
+import { PropsTable } from "@/components/PropsTable";
+
+# Label
+
+A form label component with optional required indicator.
+
+## Example
+
+<Preview code={`
+<div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+  <Label>Default label</Label>
+  <Label required>Required label</Label>
+  <div>
+    <Label htmlFor="demo-input" required>Email</Label>
+    <Input id="demo-input" placeholder="you@example.com" />
+  </div>
+</div>
+`} />
+
+## Props
+
+<PropsTable data={[
+  { name: "required", type: "boolean", default: "false", description: "Shows a red asterisk (*) next to the label." },
+  { name: "htmlFor", type: "string", default: "—", description: "Associates the label with a form element." },
+  { name: "className", type: "string", default: "—", description: "Additional CSS class names." },
+  { name: "children", type: "ReactNode", default: "—", description: "Label content." },
+]} />
+
+## Code
+
+```tsx
+import { Label } from "@orbi/react";
+
+<Label htmlFor="email" required>Email</Label>
+```

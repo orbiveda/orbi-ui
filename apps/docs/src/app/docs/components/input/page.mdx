@@ -1,0 +1,42 @@
+import { Preview } from "@/components/Preview";
+import { PropsTable } from "@/components/PropsTable";
+import { Input } from "@orbi/react";
+
+# Input
+
+A styled text input with support for disabled, read-only, and required states.
+
+## Example
+
+<Preview code={`
+<div style={{ display: "flex", flexDirection: "column", gap: 12, maxWidth: 320 }}>
+  <Input placeholder="Default input" />
+  <Input placeholder="Disabled" disabled />
+  <Input placeholder="Read only" readOnly value="Cannot edit" />
+  <Input placeholder="Required" required />
+</div>
+`}>
+  <div style={{ display: "flex", flexDirection: "column", gap: 12, maxWidth: 320 }}>
+    <Input placeholder="Default input" />
+    <Input placeholder="Disabled" disabled />
+    <Input placeholder="Read only" readOnly value="Cannot edit" />
+    <Input placeholder="Required" required />
+  </div>
+</Preview>
+
+## Props
+
+<PropsTable data={[
+  { name: "disabled", type: "boolean", default: "false", description: "Disables the input." },
+  { name: "readOnly", type: "boolean", default: "false", description: "Makes the input read-only." },
+  { name: "required", type: "boolean", default: "false", description: "Marks the input as required." },
+  { name: "className", type: "string", default: "—", description: "Additional CSS class names." },
+]} />
+
+## Code
+
+```tsx
+import { Input } from "@orbi/react";
+
+<Input placeholder="Enter text" />
+```

@@ -1,3 +1,4 @@
+"use client";
 // packages/react/select/Select.tsx
 
 import React, { forwardRef, useState } from "react";
@@ -6,8 +7,8 @@ import "./select.css";
 
 export interface SelectProps
   extends Omit<SelectBaseProps, "onValueChange">,
-    Omit<React.SelectHTMLAttributes<HTMLSelectElement>, "onChange" | "value" | "defaultValue">,
-    Pick<SelectBaseProps, "onValueChange"> {
+  Omit<React.SelectHTMLAttributes<HTMLSelectElement>, "onChange" | "value" | "defaultValue">,
+  Pick<SelectBaseProps, "onValueChange"> {
   children: React.ReactNode;
 }
 

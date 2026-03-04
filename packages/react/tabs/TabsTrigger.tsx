@@ -1,3 +1,4 @@
+"use client";
 // packages/react/tabs/TabsTrigger.tsx
 
 import React, { forwardRef, useRef, useEffect, useCallback } from "react";
