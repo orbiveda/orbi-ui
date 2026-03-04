@@ -1,0 +1,40 @@
+/* Progress Component Styles */
+
+.orbi-progress {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  border-radius: var(--orbi-radius-full);
+  background-color: rgb(var(--orbi-color-neutral-200));
+  overflow: hidden;
+}
+
+.orbi-progress-bar {
+  height: 100%;
+  border-radius: var(--orbi-radius-full);
+  background-color: rgb(var(--orbi-color-primary-500));
+  transition: width 0.3s ease;
+}
+
+.orbi-progress--success .orbi-progress-bar {
+  background-color: rgb(var(--orbi-color-success-500));
+}
+
+.orbi-progress--warning .orbi-progress-bar {
+  background-color: rgb(var(--orbi-color-warning-500));
+}
+
+.orbi-progress--error .orbi-progress-bar {
+  background-color: rgb(var(--orbi-color-error-500));
+}
+
+.orbi-progress-label {
+  position: absolute;
+  top: 50%;
+  right: var(--orbi-space-sm);
+  transform: translateY(-50%);
+  font-size: var(--orbi-font-sm);
+  font-weight: 500;
+  color: rgb(var(--orbi-color-text-secondary));
+  pointer-events: none;
+}

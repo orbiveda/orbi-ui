@@ -3,7 +3,16 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react({
+      jsxRuntime: "automatic",
+      babel: {
+        parserOpts: {
+          plugins: ["jsx"],
+        },
+      },
+    }),
+  ],
   resolve: {
     alias: {
       "@orbi/core": path.resolve(__dirname, "packages/core"),
@@ -12,8 +21,11 @@ export default defineConfig({
     },
   },
   test: {
-    environment: "jsdom",
+    environment: "happy-dom",
     globals: true,
+    setupFiles: ["./vitest.setup.ts"],
     include: ["**/*.{test,spec}.?(c|m)[jt]s?(x)", "**/*.test-d.ts"],
+    threads: true,
+    isolate: true,
   },
 });

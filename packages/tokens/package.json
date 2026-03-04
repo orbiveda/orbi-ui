@@ -3,6 +3,15 @@
   "version": "0.1.1-alpha",
   "description": "Design system tokens for Orbi UI",
   "license": "MIT",
+  "homepage": "https://orbi-ui.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orbi-ui/orbi-ui"
+  },
+  "bugs": {
+    "url": "https://github.com/orbi-ui/orbi-ui/issues"
+  },
+  "keywords": ["design-tokens", "design-system", "css", "variables"],
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

@@ -20,6 +20,15 @@ import {
   Avatar,
   Badge,
   Divider,
+  Switch,
+  Textarea,
+  Select,
+  Tabs,
+  TabsList,
+  TabsTrigger,
+  TabsContent,
+  Progress,
+  Tooltip,
   ThemeProvider,
 } from '../index';
 
@@ -65,6 +74,42 @@ describe('API Contract: Named Exports', () => {
     expectTypeOf(Divider).toMatchTypeOf<React.ForwardRefExoticComponent<any>>();
   });
 
+  it('exports Switch component', () => {
+    expectTypeOf(Switch).toMatchTypeOf<React.ForwardRefExoticComponent<any>>();
+  });
+
+  it('exports Textarea component', () => {
+    expectTypeOf(Textarea).toMatchTypeOf<React.ForwardRefExoticComponent<any>>();
+  });
+
+  it('exports Select component', () => {
+    expectTypeOf(Select).toMatchTypeOf<React.ForwardRefExoticComponent<any>>();
+  });
+
+  it('exports Tabs component', () => {
+    expectTypeOf(Tabs).toMatchTypeOf<React.ForwardRefExoticComponent<any>>();
+  });
+
+  it('exports TabsList component', () => {
+    expectTypeOf(TabsList).toMatchTypeOf<React.ForwardRefExoticComponent<any>>();
+  });
+
+  it('exports TabsTrigger component', () => {
+    expectTypeOf(TabsTrigger).toMatchTypeOf<React.ForwardRefExoticComponent<any>>();
+  });
+
+  it('exports TabsContent component', () => {
+    expectTypeOf(TabsContent).toMatchTypeOf<React.ForwardRefExoticComponent<any>>();
+  });
+
+  it('exports Progress component', () => {
+    expectTypeOf(Progress).toMatchTypeOf<React.ForwardRefExoticComponent<any>>();
+  });
+
+  it('exports Tooltip component', () => {
+    expectTypeOf(Tooltip).toMatchTypeOf<React.ForwardRefExoticComponent<any>>();
+  });
+
   it('exports ThemeProvider component', () => {
     expectTypeOf(ThemeProvider).toMatchTypeOf<React.ComponentType<any>>();
   });
@@ -99,6 +144,86 @@ describe('API Contract: Props Types', () => {
       onChange: () => {},
     };
     expectTypeOf(checkboxProps).toMatchTypeOf<any>();
+  });
+
+  it('Switch accepts checked and onCheckedChange', () => {
+    const switchProps = {
+      checked: false,
+      defaultChecked: false,
+      onCheckedChange: (checked: boolean) => {},
+      disabled: false,
+    };
+    expectTypeOf(switchProps).toMatchTypeOf<any>();
+  });
+
+  it('Textarea accepts React textarea attributes', () => {
+    const textareaProps = {
+      variant: 'default' as const,
+      rows: 4,
+      disabled: false,
+      readOnly: false,
+      onChange: () => {},
+    };
+    expectTypeOf(textareaProps).toMatchTypeOf<any>();
+  });
+
+  it('Select accepts value and onValueChange', () => {
+    const selectProps = {
+      value: 'opt1',
+      defaultValue: '',
+      onValueChange: (value: string) => {},
+      disabled: false,
+      required: false,
+    };
+    expectTypeOf(selectProps).toMatchTypeOf<any>();
+  });
+
+  it('Tabs accepts value and onValueChange', () => {
+    const tabsProps = {
+      value: 'tab1',
+      defaultValue: 'tab1',
+      onValueChange: (value: string) => {},
+      orientation: 'horizontal' as const,
+    };
+    expectTypeOf(tabsProps).toMatchTypeOf<any>();
+  });
+
+  it('TabsTrigger accepts value prop', () => {
+    const triggerProps = {
+      value: 'tab1',
+      disabled: false,
+    };
+    expectTypeOf(triggerProps).toMatchTypeOf<any>();
+  });
+
+  it('TabsContent accepts value prop', () => {
+    const contentProps = {
+      value: 'tab1',
+    };
+    expectTypeOf(contentProps).toMatchTypeOf<any>();
+  });
+
+  it('Progress accepts value and max props', () => {
+    const progressProps = {
+      value: 50,
+      max: 100,
+      variant: 'success' as const,
+      label: 'Loading',
+    };
+    expectTypeOf(progressProps).toMatchTypeOf<any>();
+  });
+
+  it('Tooltip accepts content and placement props', () => {
+    const tooltipProps = {
+      content: 'Tooltip text',
+      open: true,
+      defaultOpen: false,
+      onOpenChange: (open: boolean) => {},
+      placement: 'top' as const,
+      delay: 200,
+      disabled: false,
+    };
+    expectTypeOf(tooltipProps).toMatchTypeOf<any>();
   });
 
   it('Dialog accepts standard attributes', () => {

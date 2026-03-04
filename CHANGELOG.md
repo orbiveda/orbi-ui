@@ -4,6 +4,32 @@ All notable changes to Orbi UI are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1-alpha] - 2026-03-04
+
+### Added
+
+- **Release Infrastructure** — Phase F Public Release Preparation
+  - GitHub Actions automated release workflow
+  - NPM publish configuration for all packages
+  - Installation and versioning documentation
+  - Example applications (Next.js and Vite)
+
+- **Documentation Updates**
+  - Installation guide with package setup
+  - Token usage documentation
+  - Versioning policy document
+  - Public release readiness
+
+- **Example Projects**
+  - Next.js example application
+  - Vite example application with component demonstrations
+
+### Improvements
+
+- Enhanced package.json metadata (repository, homepage, bugs, keywords)
+- Added conventional commit changelog integration
+- Improved release workflow automation
+
 ## [0.1.0-alpha] - 2026-03-02
 
 ### Added

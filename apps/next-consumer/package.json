@@ -1,0 +1,26 @@
+{
+  "name": "orbi-next-consumer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@orbi/react": "file:../../.packages/orbi-react-0.1.1-alpha.tgz",
+    "@orbi/core": "file:../../.packages/orbi-core-0.1.1-alpha.tgz",
+    "@orbi/tokens": "file:../../.packages/orbi-tokens-0.1.1-alpha.tgz",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "next": "^14.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.3.0"
+  }
+}

@@ -1,0 +1,43 @@
+/* Textarea Component Styles */
+
+.orbi-textarea {
+  border: 1px solid rgb(var(--orbi-color-neutral-200));
+  border-radius: var(--orbi-radius-md);
+  padding: var(--orbi-space-sm) var(--orbi-space-md);
+  font-size: var(--orbi-font-md);
+  font-family: inherit;
+  background-color: rgb(var(--orbi-color-surface));
+  color: rgb(var(--orbi-color-text-primary));
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+  resize: vertical;
+}
+
+.orbi-textarea:focus {
+  border-color: rgb(var(--orbi-color-primary-500));
+  box-shadow: 0 0 0 2px rgba(var(--orbi-color-primary-500), 0.1);
+}
+
+.orbi-textarea--outlined {
+  border: 2px solid rgb(var(--orbi-color-neutral-300));
+}
+
+.orbi-textarea--outlined:focus {
+  border-color: rgb(var(--orbi-color-primary-600));
+  box-shadow: 0 0 0 3px rgba(var(--orbi-color-primary-600), 0.1);
+}
+
+.orbi-textarea--disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: rgb(var(--orbi-color-neutral-100));
+}
+
+.orbi-textarea--readonly {
+  background-color: rgb(var(--orbi-color-neutral-50));
+  cursor: default;
+}
+
+.orbi-textarea::placeholder {
+  color: rgb(var(--orbi-color-text-muted));
+}

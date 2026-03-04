@@ -3,6 +3,15 @@
   "version": "0.1.1-alpha",
   "description": "Headless React hooks for Orbi UI components",
   "license": "MIT",
+  "homepage": "https://orbi-ui.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orbi-ui/orbi-ui"
+  },
+  "bugs": {
+    "url": "https://github.com/orbi-ui/orbi-ui/issues"
+  },
+  "keywords": ["react", "hooks", "headless", "design-system", "ui"],
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

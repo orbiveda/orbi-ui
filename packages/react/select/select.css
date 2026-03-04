@@ -1,0 +1,45 @@
+/* Select Component Styles */
+
+.orbi-select {
+  border: 1px solid rgb(var(--orbi-color-neutral-200));
+  border-radius: var(--orbi-radius-md);
+  padding: var(--orbi-space-sm) var(--orbi-space-md);
+  font-size: var(--orbi-font-md);
+  background-color: rgb(var(--orbi-color-surface));
+  color: rgb(var(--orbi-color-text-primary));
+  cursor: pointer;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23525252' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: calc(100% - var(--orbi-space-md)) center;
+  padding-right: var(--orbi-space-lg);
+}
+
+.orbi-select:focus {
+  border-color: rgb(var(--orbi-color-primary-500));
+  box-shadow: 0 0 0 2px rgba(var(--orbi-color-primary-500), 0.1);
+}
+
+.orbi-select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: rgb(var(--orbi-color-neutral-100));
+}
+
+.orbi-select--disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.orbi-select option {
+  background-color: rgb(var(--orbi-color-surface));
+  color: rgb(var(--orbi-color-text-primary));
+  padding: var(--orbi-space-sm) var(--orbi-space-md);
+}
+
+.orbi-select option:checked {
+  background: rgb(var(--orbi-color-primary-500));
+  color: white;
+}
